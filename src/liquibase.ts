@@ -14,7 +14,7 @@ class LiquibaseClass {
     url: `jdbc:postgresql://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?reconnect=true`,
     username: process.env.DB_USER!,
     password: process.env.DB_PASSWORD!,
-    logLevel: LiquibaseLogLevels.Debug,
+    logLevel: LiquibaseLogLevels.Off,
   };
 
   async init() {

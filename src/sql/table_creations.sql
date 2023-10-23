@@ -121,3 +121,14 @@ create table resturent_type_mappings (
     updated_at timestamp without time zone NOT NULL
     DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
+--changeset shashiknat:1698057369
+--comment: To create User,
+CREATE TABLE email_templates (
+    id serial PRIMARY KEY,
+    content VARCHAR(1000),
+    type VARCHAR(255),
+    created_at timestamp without time zone NOT NULL
+    DEFAULT (current_timestamp AT TIME ZONE 'UTC'),
+    updated_at timestamp without time zone NOT NULL
+    DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+);
