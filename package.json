@@ -1,0 +1,19 @@
+{
+  "name": "tasty_trade_migrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "liquibase": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7"
+  }
+}
