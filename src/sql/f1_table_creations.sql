@@ -126,3 +126,18 @@ CREATE TABLE email_templates (
     created_at timestamp without time zone NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC'),
     updated_at timestamp without time zone NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
+
+--changeset shashiknat:1698214169
+--comment: To alter columns in User table,
+ALTER TABLE
+    users DROP COLUMN password;
+
+ALTER TABLE
+    users
+ALTER COLUMN
+    name DROP NOT NULL;
+
+ALTER TABLE
+    users
+ADD
+    COLUMN is_phone_exist BOOLEAN DEFAULT false;
