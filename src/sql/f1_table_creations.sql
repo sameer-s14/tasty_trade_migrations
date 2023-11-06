@@ -141,3 +141,16 @@ ALTER TABLE
     users
 ADD
     COLUMN is_phone_exist BOOLEAN DEFAULT false;
+
+--changeset Sameer Khan:1698214169
+--comment: Create table to store restaurant timings
+CREATE TABLE restaurant_timings (
+    id serial PRIMARY KEY,
+    day ENUM('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'),
+    opening_time TIME,
+    closing_time TIME,
+    restaurant_id int,
+    is_active BOOL DEFAULT true,
+    created_at timestamp without time zone NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC'),
+    updated_at timestamp without time zone NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+)
