@@ -142,11 +142,13 @@ ALTER TABLE
 ADD
     COLUMN is_phone_exist BOOLEAN DEFAULT false;
 
---changeset Sameer Khan:1698214169
+--changeset Sameer Khan:1699257693
 --comment: Create table to store restaurant timings
+CREATE TYPE day_enum AS ENUM('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday');
+
 CREATE TABLE restaurant_timings (
     id serial PRIMARY KEY,
-    day ENUM('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'),
+    day day_enum,
     opening_time TIME,
     closing_time TIME,
     restaurant_id int,
